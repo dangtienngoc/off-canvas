@@ -1,0 +1,10 @@
+
+// Import asset from bootstrap
+@import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_variables.scss";
+@import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_mixins.scss";
+
+@import "vars";
+@import "mixins";
+
+@import "base";
+@import "effects";

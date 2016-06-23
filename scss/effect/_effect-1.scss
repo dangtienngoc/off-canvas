@@ -1,0 +1,17 @@
+// Side in on Top
+
+.effect-1 {
+	#{$brand-prefix}off-canvas {
+		@include translate3d(-100%, 0, 0);
+		&:after {
+			display: none;
+		}
+	}
+
+	&#{$brand-prefix}menu-open {
+		#{$brand-prefix}off-canvas { 
+			visibility: visible;
+			@include translate3d(0, 0, 0);
+		}
+	}
+}
