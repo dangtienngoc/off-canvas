@@ -1,0 +1,23 @@
+{
+  "name": "off-canvas",
+  "version": "1.0.0",
+  "description": "Effect for Menu Off-canvas",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dangtienngoc/off-canvas.git"
+  },
+  "author": "Ngoc Dang",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dangtienngoc/off-canvas/issues"
+  },
+  "homepage": "https://github.com/dangtienngoc/off-canvas#readme",
+  "devDependencies": {
+    "bootstrap-sass": "^3.3.6",
+    "jquery": "^3.0.0"
+  }
+}
