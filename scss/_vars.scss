@@ -1,8 +1,12 @@
 
 
-$brand-prefix: ".jsn-";
+$brand-prefix: ".jsn-" !default;
 
 $bg-overlap : rgba(0,0,0,0.2) !default;
 $bg-overlap-opancity: 0;
 
 $off-canvas-width: 300px !default;
+
+$off-canvas : #{$brand-prefix}off-canvas !default;
+$content    : #{$brand-prefix}content !default;
+$open       : #{$brand-prefix}menu-open !default;   

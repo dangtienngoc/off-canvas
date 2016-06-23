@@ -17,20 +17,27 @@
 			<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 		<![endif]-->
 	</head>
-	<body class="effect-1">
+	<body class="effect-2">
 		
 		<div class="jsn-content">
-			<div class="header">
+
+
+			<div class="s1">
+				<div class="container"><h1>Effect For Offcanvas</h1></div>
+			</div>
+
+			<div class="s2">
 				<div class="container">
-					<button class="btn-effect" type="button" data-effect="effect-1" class="btn btn-default">Side In On Top</button>
+					<button type="button" data-effect="effect-1" class="btn-effect btn btn-success">Side In On Top</button>
+					<button type="button" data-effect="effect-2" class="btn-effect btn btn-success">Reveal</button>
 				</div>
 			</div>
 		</div><!-- /jsn-content -->
 
-		<div class="jsn-off-canvas effect-1">
+		<div class="jsn-off-canvas effect-2">
 			<div class="position">
 				<button type="button" class="btn btn-danger close-menu">x</button>
-				Position Offcanvas
+				Position Offcanvas 1
 			</div>
 		</div><!-- /off-canvas -->
 
@@ -45,6 +52,7 @@
 				$('.btn-effect').click(function(){
 					effect = $(this).attr('data-effect');
 					$('body').addClass('jsn-menu-open');
+					$('body').addClass('effect');
 				});
 
 				$('.close-menu').click(function() {

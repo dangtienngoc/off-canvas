@@ -1,0 +1,30 @@
+
+
+.effect-2 {
+	#{$off-canvas} {
+		z-index: 1;
+		&:after {
+			display: none;
+		}
+	}
+
+	&#{$off-canvas} {
+		@include transition(transform 0.5s);
+	}
+
+	&#{$open} {
+		overflow: hidden;
+		#{$content} {
+			@include transition(transform 0.5s);
+			@include translate3d($off-canvas-width, 0, 0);
+		}
+
+		#{$off-canvas} {
+			visibility: visible;
+		}
+
+	}
+
+
+
+}
