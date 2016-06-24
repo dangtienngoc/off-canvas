@@ -130,4 +130,25 @@ body,
   transform: translate3d(0, 0, 0);
 }
 
+.effect-4 .jsn-off-canvas {
+  z-index: 1;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+  -webkit-transform: translate3d(-150px, 0, 0);
+  transform: translate3d(-150px, 0, 0);
+}
+.effect-4.jsn-menu-open .jsn-content {
+  -webkit-transform: translate3d(300px, 0, 0);
+  transform: translate3d(300px, 0, 0);
+}
+.effect-4.jsn-menu-open .jsn-off-canvas {
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+  visibility: visible;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
 /*# sourceMappingURL=off-canvas.css.map */
