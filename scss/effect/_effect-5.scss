@@ -1,0 +1,24 @@
+
+// Effect 5: Reverse slide out
+
+.effect-5 {
+
+	#{$off-canvas} {
+		z-index: 1;
+		@include transition(all 0.5s);
+		@include translate3d($off-canvas-width/2, 0, 0);
+	}
+
+	&#{$open} {
+		#{$content} {
+			@include translate3d($off-canvas-width, 0, 0);
+		}
+
+		#{$off-canvas} {
+			@include transition(all 0.5s);
+			visibility: visible;
+			@include translate3d(0, 0, 0);
+		}
+	}
+
+}

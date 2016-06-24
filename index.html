@@ -38,6 +38,7 @@
 								  <option value="effect-2">Reveal</option>
 								  <option value="effect-3">Push</option>
 								  <option value="effect-4">Slide along</option>
+								  <option value="effect-5">Reverse slide out</option>
 								</select>
 						    </div>
 						    <div class="col-sm-3">
@@ -81,7 +82,6 @@
 				function setClass (effect) {
 					$('body').removeClass().addClass(effect);
 					$('#offcanvas').removeClass().addClass('jsn-off-canvas ' + effect);
-
 				}
 
 				setClass(effect);
