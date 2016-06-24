@@ -7,6 +7,7 @@ $bg-overlap-opancity: 0;
 
 $off-canvas-width: 300px !default;
 
-$off-canvas : #{$brand-prefix}off-canvas !default;
-$content    : #{$brand-prefix}content !default;
-$open       : #{$brand-prefix}menu-open !default;   
+$off-canvas 		: #{$brand-prefix}off-canvas !default;
+$content    		: #{$brand-prefix}content !default;
+$content-inner		: #{$brand-prefix}content-inner !default;
+$open       		: #{$brand-prefix}menu-open !default;  

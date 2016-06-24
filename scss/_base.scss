@@ -2,8 +2,15 @@
 html,
 body,
 #{$content},
+#{$content-inner},
 #{$off-canvas} {
 	height: 100%;
+	overflow: hidden;
+}
+
+#{$content-inner} {
+	position: relative;
+	background: #f3efe0;
 }
 
 #{$content} {
@@ -12,7 +19,7 @@ body,
 	z-index: 99;
 	perspective: 1000px;
 	@include transition(transform 0.5s);
-
+	overflow: hidden;
 	&:after {
 		position: absolute;
 		top: 0;

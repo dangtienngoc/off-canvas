@@ -1,8 +1,15 @@
 html,
 body,
 .jsn-content,
+.jsn-content-inner,
 .jsn-off-canvas {
   height: 100%;
+  overflow: hidden;
+}
+
+.jsn-content-inner {
+  position: relative;
+  background: #f3efe0;
 }
 
 .jsn-content {
@@ -13,6 +20,7 @@ body,
   -webkit-transition: transform 0.5s;
   -o-transition: transform 0.5s;
   transition: transform 0.5s;
+  overflow: hidden;
 }
 .jsn-content:after {
   position: absolute;
@@ -88,35 +96,18 @@ body,
   transform: translate3d(0, 0, 0);
 }
 
-.effect-2 .jsn-off-canvas {
-  z-index: 1;
-}
-.effect-2 .jsn-off-canvas:after {
-  display: none;
-}
-.effect-2.jsn-off-canvas {
-  -webkit-transition: transform 0.5s;
-  -o-transition: transform 0.5s;
-  transition: transform 0.5s;
-}
-.effect-2.jsn-menu-open {
-  overflow: hidden;
-}
 .effect-2.jsn-menu-open .jsn-content {
-  -webkit-transition: transform 0.5s;
-  -o-transition: transform 0.5s;
-  transition: transform 0.5s;
   -webkit-transform: translate3d(300px, 0, 0);
   transform: translate3d(300px, 0, 0);
 }
-.effect-2.jsn-menu-open .jsn-off-canvas {
+.effect-2.jsn-menu-open .effect-2.jsn-off-canvas {
   visibility: visible;
-}
-
-.jsn-content {
   -webkit-transition: transform 0.5s;
   -o-transition: transform 0.5s;
   transition: transform 0.5s;
+}
+.effect-2 .jsn-off-canvas {
+  z-index: 1;
 }
 
 /*# sourceMappingURL=off-canvas.css.map */
