@@ -1,58 +1,60 @@
 
 html,
 body,
-#{$brand-prefix}content,
-#{$brand-prefix}off-canvas {
+#{$content},
+#{$off-canvas} {
 	height: 100%;
 }
 
-#{$brand-prefix}menu-open {
-
-	#{$brand-prefix}content {
-		&:after {
-			width: 100%;
-			height: 100%;
-			opacity: 1;
-			-webkit-transition: opacity 0.5s;
-			transition: opacity 0.5s;
-		}
-	}
-
-}
-
-// wapper
-#{$brand-prefix}content {
+#{$content} {
 	position: relative;
 	left: 0;
 	z-index: 99;
-	height: 100%;
 	perspective: 1000px;
+	@include transition(transform 0.5s);
+
+	&:after {
+		position: absolute;
+		top: 0;
+		right: 0;
+		@include size();
+		background: rgba(0,0,0,0.2);
+		content: '';
+		@include opacity(0);
+		@include transition(opacity 0.5s, width 0.1s 0.5s, height 0.1s 0.5s);
+
+		#{$open} & {
+			@include size(100%, 100%);
+			@include opacity(1);
+			@include transition(opacity 0.5s);
+		}
+	}
+}
+
+#{$off-canvas} {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 100;
+	visibility: hidden;
+	@include size($off-canvas-width, 100%);
+	background: #48a770;
 	@include transition(all 0.5s);
 
 	&:after {
 		position: absolute;
 		top: 0;
 		right: 0;
-		width: 0;
-		height: 0;
+		@include size(100%, 100%);
 		background: rgba(0,0,0,0.2);
 		content: '';
-		opacity: 0;
-		@include transition(opacity 0.5s, width 0.1s 0.5s, height 0.1s 0.5s);
+		@include opacity(1);
+		@include transition(opacity 0.5s);
+
+		#{$open} & {
+			@include size();
+			@include opacity(0);
+			@include transition(opacity 0.5s, width 0.1s 0.5s, height 0.1s 0.5s);
+		}
 	}
-
-}
-
-
-// off canvas
-#{$brand-prefix}off-canvas {
-	position: absolute;
-	top: 0;
-	left: 0;
-	z-index: 100;
-	visibility: hidden;
-	width: $off-canvas-width;
-	height: 100%;
-	background: #48a770;
-	@include transition(all 0.5s);
 }

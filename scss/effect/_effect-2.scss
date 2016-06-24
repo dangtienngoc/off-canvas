@@ -25,6 +25,8 @@
 
 	}
 
+}
 
-
+#{$content} { 
+	@include transition(transform 0.5s);
 }
