@@ -2,3 +2,13 @@
 	width: $width;
 	height: $height;
 }
+
+@mixin transform-style($origin) {
+  -webkit-transform-style: $origin;
+  		  transform-style: $origin;
+}
+
+@mixin transform($origin) {
+	-webkit-transform: $origin;
+  		    transform: $origin;
+}
