@@ -4,6 +4,7 @@
 
 	#{$content} {
 		@include transform-style(preserve-3d);
+		@include transform-origin(100% 50%);
 	}
 
 	#{$off-canvas} {
