@@ -1,0 +1,25 @@
+.effect-10 {
+
+	@include perspective(1500px);
+	@include perspective-origin(0% 50%);
+
+	#{$off-canvas} {
+		z-index: 1;
+		@include transition(all 0.5s);
+		@include translate3d(0, 0, -$off-canvas-width);
+		@include transform-style(preserve-3d);
+	}
+
+	&#{$open} {
+		#{$content} {
+			@include transform(translate3d($off-canvas-width, 0, 0));
+		}
+
+		#{$off-canvas} {
+			@include transition(all 0.5s);
+			visibility: visible;
+			@include translate3d(0, 0, 0);
+		}
+	}
+
+}

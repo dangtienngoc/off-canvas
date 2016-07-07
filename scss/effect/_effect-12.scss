@@ -1,0 +1,27 @@
+.effect-11 {
+
+	@include perspective(1500px);
+
+	#{$content} {
+		@include transform-origin(100% 50%);
+		@include transform-style(preserve-3d);
+	}
+
+	#{$off-canvas} {
+		@include transition(all 0.5s);
+		@include translate3d(-$off-canvas-width, 0, 0);
+	}
+
+	&#{$open} {
+		#{$content} {
+			@include transform(rotateY(-20deg));
+		}
+
+		#{$off-canvas} {
+			@include transition(all 0.5s);
+			visibility: visible;
+			@include translate3d(0, 0, 0);
+		}
+	}
+
+}
